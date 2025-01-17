@@ -4,6 +4,7 @@ plugins {
     id("com.google.devtools.ksp") version "2.0.21-1.0.25"
     id("dagger.hilt.android.plugin")
     id("org.jetbrains.kotlin.plugin.compose")
+    id("kotlin-parcelize")
 }
 
 android {
@@ -54,6 +55,7 @@ dependencies {
     implementation(libs.androidx.runtime.android)
     implementation(libs.androidx.foundation.android)
     implementation(libs.androidx.material3.android)
+    implementation(libs.androidx.ui.tooling.preview.android)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -63,17 +65,29 @@ dependencies {
             strictly("1.6.8")
         }
     }
+    implementation ("androidx.compose.material:material"){
+        version {
+            strictly("1.6.8")
+        }
+    }
 
     implementation(libs.glide)
     implementation(libs.landscapist.glide)
+    implementation(libs.coil.compose)
     implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.constraintlayout.compose)
 
     implementation(libs.rainbow.cake.core)
     implementation(libs.rainbow.cake.navigation)
     implementation(libs.rainbow.cake.hilt)
 
     implementation(libs.dagger)
+    debugImplementation(libs.androidx.ui.tooling)
     ksp(libs.dagger.compiler)
     implementation(libs.hilt.android)
     ksp(libs.hilt.android.compiler)
+
+    implementation(libs.androidx.room.runtime)
+    ksp(libs.androidx.room.compiler)
+    implementation(libs.androidx.room.ktx)
 }

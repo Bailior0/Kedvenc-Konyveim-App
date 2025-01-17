@@ -1,6 +1,8 @@
 [versions]
 activityCompose = "1.9.3"
 agp = "8.6.0"
+coilCompose = "2.7.0"
+constraintlayoutCompose = "1.1.0"
 dagger = "2.50"
 glide = "4.16.0"
 hiltAndroidGradlePluginVersion = "2.50"
@@ -13,13 +15,21 @@ appcompat = "1.7.0"
 landscapistGlide = "2.4.1"
 material = "1.12.0"
 rainbowCakeCore = "1.6.0"
+roomRuntime = "2.6.1"
 runtimeAndroid = "1.7.5"
 foundationAndroid = "1.7.5"
 material3Android = "1.3.1"
+uiToolingPreviewAndroid = "1.7.6"
+uiTooling = "1.7.6"
 
 [libraries]
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
+androidx-constraintlayout-compose = { module = "androidx.constraintlayout:constraintlayout-compose", version.ref = "constraintlayoutCompose" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomRuntime" }
+androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "roomRuntime" }
+androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomRuntime" }
+coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coilCompose" }
 dagger = { module = "com.google.dagger:dagger", version.ref = "dagger" }
 dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "dagger" }
 dagger-hilt-android-gradle-plugin = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "hiltAndroidGradlePluginVersion" }
@@ -38,6 +48,8 @@ androidx-material3-android = { group = "androidx.compose.material3", name = "mat
 rainbow-cake-core = { module = "co.zsmb:rainbow-cake-core", version.ref = "rainbowCakeCore" }
 rainbow-cake-hilt = { module = "co.zsmb:rainbow-cake-hilt", version.ref = "rainbowCakeCore" }
 rainbow-cake-navigation = { module = "co.zsmb:rainbow-cake-navigation", version.ref = "rainbowCakeCore" }
+androidx-ui-tooling-preview-android = { group = "androidx.compose.ui", name = "ui-tooling-preview-android", version.ref = "uiToolingPreviewAndroid" }
+androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling", version.ref = "uiTooling" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
